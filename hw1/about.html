@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Oswald&family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1 class="title-m">G L A M</h1>
+            <p class="desc">Онлайн-магазин брендовой одежды от известных модельеров</p>
+            <p class="desc">Широкий выбор и отличное качество</p>
+            <div class="nav">
+                <button class="button" onclick="document.location='index.html'"><span>Главная </span></button>
+                <button class="button" onclick="document.location='cloth.html'"><span>Одежда </span></button>
+                <button class="button" onclick="document.location='hw.html'"><span>Обувь </span></button>
+                <button class="button" onclick="document.location='about.html'"><span>О нас </span></button>
+            </div>
+        </div>        
+    </div>
+    <div class="content">
+        <div class="container">
+            <h1 class="title">Где мы находимся?</h1>
+            <div id="map" style="margin-bottom: 16px;width: 100%;height:200px;"></div>
+            <p class="desc">Мы хотели добавить карту, но наш сайт неавторизован</p>
+            <p class="desc">Так что простите-извините</p>
+            <div class="nav"><button class="button" style="display:block;margin:0 auto;" onclick="document.location='https://youtu.be/bq6gMJgguHY'"><span>... </span></button></div>
+            <script>
+                function myMap() {
+                var mapCanvas = document.getElementById("map");
+                    var mapOptions = {
+                        center: new google.maps.LatLng(51.5, -0.2), 
+                        zoom: 10
+                    };
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+                }
+            </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDR8P72HMX3zllKeeZt8X89dJWMEu0LSX8&callback=myMap" async defer></script>
+        </div>     
+    </div>
+    <div class="footer">
+        <div class="container">
+
+        </div>
+    </div>
+</body>
+</html>
