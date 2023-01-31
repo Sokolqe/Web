@@ -72,17 +72,66 @@
 <body>
   <div class="header">
     <div class="container">
-      <h1 class="title-m">G L A M</h1>
-      <p class="desc">Онлайн-магазин брендовой одежды от известных модельеров</p>
-      <p class="desc">Широкий выбор и отличное качество</p>
-      <div class="nav">
-        <button class="button" onclick="document.location='index.html'"><span>Главная </span></button>
-        <button class="button" onclick="document.location='cloth.html'"><span>Одежда </span></button>
-        <button class="button" onclick="document.location='hw.html'"><span>Обувь </span></button>
-        <button class="button" onclick="document.location='about.html'"><span>О нас </span></button>
-      </div>
+        <button class="button" onclick="document.getElementById('id05').style.display='block'"
+            style="background-color: darkgreen; height: 35px; padding: 0%;"><span>Войти</span></button>
+
+        <div id="id05" class="modal">
+            <span onclick="document.getElementById('id05').style.display='none'" class="close"
+                title="Закрыть окно">x</span>
+            <form class="modal-content">
+                <div class="container">
+                    <h1>Регистрация</h1>
+                    <p>Заполните форму чтобы зарегистрировать аккаунт</p>
+                    <hr>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Введите адрес электронной почты" name="email" required>
+
+                    <label for="psw"><b>Пароль</b></label>
+                    <input type="password" placeholder="Введите пароль" name="psw" required>
+
+                    <label for="psw-repeat"><b>Повторите пароль</b></label>
+                    <input type="password" placeholder="Повторите пароль" name="psw-repeat" required>
+
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"
+                            style="margin-bottom:15px; cursor: pointer;"> Запомнить меня
+                    </label>
+
+                    <p>Создавая учетную запись Вы соглашаетесь с <a
+                            href="http://memesmix.net/media/created/buvg6q.jpg" style="color:darkmagenta">Правилами
+                            и Политикой безопасности</a>.</p>
+
+                    <div class="clearfix">
+                        <button type="but" onclick="document.getElementById('id05').style.display='none'"
+                            class="cancelbtn">Отмена</button>
+                        <button type="submit" class="signupbtn"
+                            onclick="document.location='https://cs8.pikabu.ru/post_img/2017/09/25/6/og_og_1506326486285717798.jpg'">Зарегистрироваться</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <script>
+            var modal = document.getElementById('id05');
+
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+        </script>
+
+        <h1 class="title-m">G L A M</h1>
+        <p class="desc">Онлайн-магазин брендовой одежды от известных модельеров</p>
+        <p class="desc">Широкий выбор и отличное качество</p>
+        <div class="nav">
+            <button class="button" onclick="document.location='index.html'"><span>Главная </span></button>
+            <button class="button" onclick="document.location='cloth.html'"><span>Одежда </span></button>
+            <button class="button" onclick="document.location='hw.html'"><span>Обувь </span></button>
+            <button class="button" onclick="document.location='about.html'"><span>О нас </span></button>
+        </div>
     </div>
-  </div>
+</div>
   <div class="content">
     <div class="container">
       <h2 class="title">ОБУВЬ</h2>
